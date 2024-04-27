@@ -14,7 +14,6 @@ html,body{
 {
     width: 100%;
     height: 100%;
-    /* background-color: aquamarine; */
 }
 
 #nav
@@ -22,11 +21,12 @@ html,body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /*heigth vese m nhi h rhi hu vo me adjust kr lugi gi*/
-    /* background-color: red; */
     padding: 40px 57px;
 }
 
+#menuIcon{
+    display: none;
+}
 #nav-part1{
     display: flex;
     justify-content: space-between;       /* justify-content: space-between;  bilkul nhi lge gi jb tk ap width nhi doge*/
@@ -157,4 +157,196 @@ html,body{
     font-size: 19px;
     font-weight: 400;
     color: #808080;
+}
+
+@media (max-width:600px) {
+#menuIcon{
+    display: initial;
+    font-size: 3.5vmax;
+}
+#nav
+{
+    padding: 2vmax;
+}
+#nav-part1{
+    width: 60%;   
+    flex-direction: column;   
+}
+#nav-part2{
+    display: none;
+    width: 3%; 
+}
+#nav-part1 h2{
+    font-size: 2.3vmax;         
+}
+#nav-part1 h3{
+    font-size: 2vmax; 
+    margin-top: 15px;   
+    color: #433333;  
+    padding-left: 7px;      
+}
+#content{
+    margin-top:20px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+#content h3{
+    font-size: 3.3vmax;
+    font-weight: 570;
+}
+
+#content h1{
+    margin-top: 18px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 6vmax;
+    letter-spacing: 1px;
+    word-spacing: -2.5px;
+}
+
+#case{
+    padding: 0px;
+    padding-top: 16px;
+    margin:30px;
+    display: flex;
+}
+
+#case h4{
+    font-size: 17px;
+}
+
+#case h5{
+    font-size: 15px;
+}
+#right{
+    width: 24%;
+}
+#line{
+    width: 100vmax;
+    margin-right: 6px;
+}
+
+#projects{
+    display:block;
+    flex-direction: column;
+    padding: 1vmax 3.5vmax;
+}
+
+.elem{
+    width: 100%;
+}
+.elem:nth-child(1){
+    margin-bottom: 25px;
+}
+.elem-img{
+    height: 55vmax;
+    width: 100%;
+    background-color: rgb(173, 209, 220);
+    border-radius: 22px;
+    background-size: cover;
+    background-position:center;
+}
+#img1{
+    background-image: url(./diamond_img.webp);
+}
+
+#img2{
+    background-image: url(./img2.webp);
+}
+.bottom{
+    padding: 17px 0px;
+}
+
+.bottom i{
+    padding: 8px 17px;
+    font-size: 20px;
+    border: 2.2px solid black;
+    border-radius: 30px;
+}
+
+.bottom h2{
+    font-size: 26px;
+}
+
+.bottom h4{
+    font-size: 18px;
+}
+}
+
+@media (max-height:600px){
+    #nav
+    {
+        padding: 25px 33px;
+    }
+    #nav-part2{
+        display: none;
+    }
+    #menuIcon{
+        display: block;
+        font-size: 23px;
+    }
+    #nav-part1{     
+        width: 61%;       
+    }
+    #nav h2{                  /* h2,h3,h4 sbhi ak hi size ke he na*/
+        font-size: 17px;
+        font-weight: 550;
+    }
+    #nav h3{
+        font-size: 17.1px;
+        font-weight: 550;
+    }
+    #content{
+        margin-top:25px;
+        padding: 20px 33px 15px 33px;
+    }
+    #content h3{
+        font-size: 24px;
+    }
+    #content h1{
+        margin-top: 27px;
+        font-size: 50px;
+        font-weight: 549;
+        line-height: 50px;
+        letter-spacing: -0.6px;
+        word-spacing: 1.82px;
+    }
+    #case{
+        padding: 0px 3px;
+        padding-top: 12px;
+    } 
+    #right{
+        width: 25%;
+    }  
+    #line{
+        width: 120px;
+    }  
+    #projects{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 33px;
+        gap: 29px;
+    }
+    .elem{
+        width: 50%;
+    }
+    .elem-img{
+        height: 310px;
+    } 
+    .bottom{
+        padding: 23px 2px;
+    }
+    .bottom i{
+        padding: 7px 17px;
+        font-size: 20px;
+    }
+    .bottom h2{
+        font-size: 27px;
+    }
+    
+    .bottom h4{
+        font-size: 18px;
+    }
 }
